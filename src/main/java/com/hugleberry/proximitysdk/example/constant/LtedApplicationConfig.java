@@ -1,0 +1,16 @@
+package com.hugleberry.proximitysdk.example.constant;
+
+
+public class LtedApplicationConfig {
+    
+    public static String LTED_APP_ID = "com.hugleberry.hugproximitysdk";
+
+    public static String ENS_SERVER_ADDRESS = "publicExpr.dynamicMngd";
+    public static String ENS_PROJECT_ADDRESS = "CompassToMwcV2";
+
+    public static String LTED_DISCOVERY_TASK = "discovery";
+
+    public static String getEnsProjectAddress(){
+        return ENS_SERVER_ADDRESS + "." +  ENS_PROJECT_ADDRESS;
+    }
+}
