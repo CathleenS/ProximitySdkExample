@@ -1,8 +1,8 @@
-# Proximity SDK - Example Code
+# Proximity SDK - Usage and code example
 
 ## Synopsis
 
-Proximity SDK allows to create robust proximity based applications using LTE Direct technology on Android. It is based on LTE Direct expression handling introduced by Qualcomm’s QDiscovery SDK.
+Proximity SDK allows to create robust proximity based applications using LTE Direct technology on Android. It is based on LTE Direct expression handling introduced by Qualcommâ€™s QDiscovery SDK.
 
 ## Motivation
 
@@ -10,11 +10,11 @@ Our goal is to change the way people make sense of their smartphones. Proximity 
 
 ## Usage
 
-To understand the basic functionality of LTE Direct we recommend to read Qualcomm’s QDiscovery SDK documentation: 
+To understand the basic functionality of LTE Direct we recommend to read Qualcommâ€™s QDiscovery SDK documentation: 
 [https://ltedirect.qualcomm.com/resources/docs/lte-d-supplemental-sdk-docs](https://ltedirect.qualcomm.com/resources/docs/lte-d-supplemental-sdk-docs)
 
 The Proximity SDK manages the complex LTE Direct transaction workflow for subscribe/publish/match of expressions.
-It combines expressions into stand-alone ‚Tasks’ which can create, destroy and update multiple asynchronous transactions. Each Task is running independently and is designed to represent a certain feature within your application (e.g. car2car, people discovery, messaging). Therefore all expressions created within a Task use the same expression prefix.
+It combines expressions into stand-alone â€šTasksâ€™ which can create, destroy and update multiple asynchronous transactions. Each Task is running independently and is designed to represent a certain feature within your application (e.g. car2car, people discovery, messaging). Therefore all expressions created within a Task use the same expression prefix.
 
 The Tasks are separated into Public Managed, Public Unmanaged and Private functionality (based on Transaction Types).
 Additionally each Task is split into Publish and Subscribe functionality (based on Publish and Subscribe expressions)
@@ -22,7 +22,7 @@ Publish Tasks are used to broadcast feature related data. Subscribe Tasks define
 
 The current implementation of the SDK includes only Public Managed expression handling. (see Planned Features)
 
-It provides Public Managed Subscribe and Publish Tasks that use Qualcomm’s ENS for expression match handling. Each task covers multiple match keys which affects the assignment of incoming expressions.
+It provides Public Managed Subscribe and Publish Tasks that use Qualcommâ€™s ENS for expression match handling. Each task covers multiple match keys which affects the assignment of incoming expressions.
 
 ## Code Example
 
@@ -33,9 +33,9 @@ ApplicationConfig.LTED_APP_ID);
 List<LtedMatchKey> keys = new ArrayList<LtedMatchKey>();
 List<String> musicLabels = new ArrayList();
 
-LtedMatchKey musicKey = new LtedMatchKey("Music“);
-musicKey.addLabel(„rock“);
-musicKey.addLabel(„electro);
+LtedMatchKey musicKey = new LtedMatchKey("Musicâ€œ);
+musicKey.addLabel(â€žrockâ€œ);
+musicKey.addLabel(â€želectro);
 keys.add(musicKey);
 final PublicManagedSubscribeTask subscribeTask = new
 PublicManagedSubscribeTask("this", DataProvider.LTED_DISCOVERY_TASK);
@@ -51,8 +51,8 @@ LtedManager.initialize(config, new LtedManager.ILtedManagerCallbackHandler(){
 
 ## Installation
 
-1.	Download Proximity SDK and copy ’proximitysdk.aar’ file into your project/lib directory
-2.	Download QDiscovery SDK (min. v.0.9.2) and copy ’qdiscovery.jar’ file into your project/lib directory:
+1.	Download Proximity SDK and copy â€™proximitysdk.aarâ€™ file into your project/lib directory
+2.	Download QDiscovery SDK (min. v.0.9.2) and copy â€™qdiscovery.jarâ€™ file into your project/lib directory:
 [https://ltedirect.qualcomm.com/resources/sdk/092-combined-lte-direct-sdk-package](https://ltedirect.qualcomm.com/resources/sdk/092-combined-lte-direct-sdk-package)
 3.	Update your build.gradle file:
 
@@ -64,7 +64,7 @@ compile 'com.google.code.gson:gson:2.3.1'
 
 
 To run your application without an LTE Direct chip you need to install LTE Direct simulator on your device. See Qualcomm Support document for install instructions: [https://ltedirect.qualcomm.com/resources/docs/discovery-install-configuration](https://ltedirect.qualcomm.com/resources/docs/discovery-install-configuration)
-Besides you need to register any device on which you want to run the application on Qualcomm’s developer platform: [https://ltedirect.qualcomm.com/devices/assigned-devices](https://ltedirect.qualcomm.com/devices/assigned-devices)
+Besides you need to register any device on which you want to run the application on Qualcommâ€™s developer platform: [https://ltedirect.qualcomm.com/devices/assigned-devices](https://ltedirect.qualcomm.com/devices/assigned-devices)
 
 You also need to create a project on Qualcomm developer platform that you can rely on in your application: [https://ltedirect.qualcomm.com/dynamic_managed](https://ltedirect.qualcomm.com/dynamic_managed)
  (See Qualcomm Supporting Doc: [https://ltedirect.qualcomm.com/resources/docs/lte-d-supplemental-sdk-docs](https://ltedirect.qualcomm.com/resources/docs/lte-d-supplemental-sdk-docs) : 1_LTED_BuildingPublicManagedexpressions.pdf )
