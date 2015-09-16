@@ -34,11 +34,11 @@ List<LtedMatchKey> keys = new ArrayList<LtedMatchKey>();
 List<String> musicLabels = new ArrayList();
 
 LtedMatchKey musicKey = new LtedMatchKey("Music“);
-musicKey.addLabel(„rock“);
-musicKey.addLabel(„electro);
+musicKey.addLabel("rock“);
+musicKey.addLabel("electro");
 keys.add(musicKey);
 final PublicManagedSubscribeTask subscribeTask = new
-PublicManagedSubscribeTask("this", DataProvider.LTED_DISCOVERY_TASK);
+PublicManagedSubscribeTask(this, DataProvider.LTED_DISCOVERY_TASK);
 subscribeTask.setMatchKeys(keys);
 
 LtedManager.initialize(config, new LtedManager.ILtedManagerCallbackHandler(){
